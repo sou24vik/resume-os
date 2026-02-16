@@ -13,7 +13,10 @@ const PORT = process.env.PORT || 3000;
 await connectDB()
 
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+    origin: ["http://localhost:5173", "http://localhost:3000", "https://resume-ri3rajv14-souvik-das-projects-3bda5339.vercel.app"],
+    credentials: true
+}))
 
 app.get("/", (req, res) => res.send("App is Live..."))
 
