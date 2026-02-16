@@ -13,6 +13,7 @@ const PORT = process.env.PORT || 3000;
 await connectDB()
 
 app.use(express.json())
+
 app.use(cors({
     origin: [
         "http://localhost:5173",
@@ -20,8 +21,6 @@ app.use(cors({
     ],
     credentials: true
 }))
-
-
 
 app.get("/", (req, res) => res.send("App is Live..."))
 
