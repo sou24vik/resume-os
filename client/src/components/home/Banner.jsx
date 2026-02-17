@@ -2,8 +2,11 @@ import React from 'react'
 
 const Banner = () => {
     return (
-        <div className="w-full py-2.5 font-medium text-sm text-green-800 text-center bg-linear-to-r from-[#ABFF7E] to-[#FDFEFF]">
-            <p><span className="px-3 py-1 rounded-lg text-white bg-green-600 mr-2">New</span>AI Feature Added</p>
+        <div className="w-full py-2.5 font-semibold text-xs tracking-wider uppercase text-indigo-400 text-center bg-zinc-900 border-b border-zinc-800">
+            <p>
+                <span className="px-2 py-0.5 rounded bg-indigo-500 text-white mr-3 text-[10px]">Beta</span>
+                New: AI Resume Score Analysis is now available
+            </p>
         </div>
     )
 }

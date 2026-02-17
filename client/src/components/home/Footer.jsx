@@ -3,83 +3,61 @@ import React from 'react'
 const Footer = () => {
     return (
         <>
+            <footer className="bg-zinc-950 pt-32 pb-16 px-6 md:px-16 lg:px-24 xl:px-40 border-t border-zinc-900">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
+                    <div className="lg:col-span-2 space-y-8">
+                        <a href="#">
+                            <img src='/logo2.png' alt='logo' className='h-10 w-auto brightness-200' />
+                        </a>
+                        <p className="text-zinc-500 max-w-xs text-sm leading-relaxed font-medium">
+                            Architecting the future of recruitment through AI-powered optimization and professional design.
+                        </p>
+                        <div className="flex items-center gap-5 text-zinc-400">
+                            {/* Icons with dark styling */}
+                            <a href="#" className="hover:text-indigo-500 transition-colors">
+                                <svg className="size-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
+                            </a>
+                            <a href="#" className="hover:text-indigo-500 transition-colors">
+                                <svg className="size-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" /></svg>
+                            </a>
+                        </div>
+                    </div>
 
-            <footer className="flex flex-wrap justify-center lg:justify-between overflow-hidden gap-10 md:gap-20 py-16 px-6 md:px-16 lg:px-24 xl:px-32 text-[13px] text-gray-500 bg-linear-to-r from-white via-green-200/60 to-white mt-40">
-                <div className="flex flex-wrap items-start gap-10 md:gap-15 xl:gap-35">
-                    <a href="#">
-                        <img src='/logo.svg' alt='logo' className='h-11 w-auto' />
-                    </a>
                     <div>
-                        <p className="text-slate-800 font-semibold">Product</p>
-                        <ul className="mt-2 space-y-2">
-                            <li><a href="/" className="hover:text-green-600 transition">Home</a></li>
-                            <li><a href="/" className="hover:text-green-600 transition">Support</a></li>
-                            <li><a href="/" className="hover:text-green-600 transition">Pricing</a></li>
-                            <li><a href="/" className="hover:text-green-600 transition">Affiliate</a></li>
+                        <h4 className="text-white font-bold mb-6 text-sm uppercase tracking-widest">Platform</h4>
+                        <ul className="space-y-4 text-zinc-500 text-sm font-medium">
+                            <li><a href="/" className="hover:text-indigo-400 transition">Design Engine</a></li>
+                            <li><a href="/" className="hover:text-indigo-400 transition">AI Scoring</a></li>
+                            <li><a href="/" className="hover:text-indigo-400 transition">Templates</a></li>
+                            <li><a href="/" className="hover:text-indigo-400 transition">Job Search</a></li>
                         </ul>
                     </div>
+
                     <div>
-                        <p className="text-slate-800 font-semibold">Resources</p>
-                        <ul className="mt-2 space-y-2">
-                            <li><a href="/" className="hover:text-green-600 transition">Company</a></li>
-                            <li><a href="/" className="hover:text-green-600 transition">Blogs</a></li>
-                            <li><a href="/" className="hover:text-green-600 transition">Community</a></li>
-                            <li><a href="/" className="hover:text-green-600 transition">Careers<span className="text-xs text-white bg-green-600 rounded-md ml-2 px-2 py-1">We’re hiring!</span></a></li>
-                            <li><a href="/" className="hover:text-green-600 transition">About</a></li>
+                        <h4 className="text-white font-bold mb-6 text-sm uppercase tracking-widest">Company</h4>
+                        <ul className="space-y-4 text-zinc-500 text-sm font-medium">
+                            <li><a href="/" className="hover:text-indigo-400 transition">About</a></li>
+                            <li><a href="/" className="hover:text-indigo-400 transition">Careers</a></li>
+                            <li><a href="/" className="hover:text-indigo-400 transition">Blog</a></li>
+                            <li><a href="/" className="hover:text-indigo-400 transition">Press Kit</a></li>
                         </ul>
                     </div>
+
                     <div>
-                        <p className="text-slate-800 font-semibold">Legal</p>
-                        <ul className="mt-2 space-y-2">
-                            <li><a href="/" className="hover:text-green-600 transition">Privacy</a></li>
-                            <li><a href="/" className="hover:text-green-600 transition">Terms</a></li>
+                        <h4 className="text-white font-bold mb-6 text-sm uppercase tracking-widest">Legal</h4>
+                        <ul className="space-y-4 text-zinc-500 text-sm font-medium">
+                            <li><a href="/" className="hover:text-indigo-400 transition">Privacy Policy</a></li>
+                            <li><a href="/" className="hover:text-indigo-400 transition">Terms of Service</a></li>
+                            <li><a href="/" className="hover:text-indigo-400 transition">Cookie Settings</a></li>
                         </ul>
                     </div>
                 </div>
-                <div className="flex flex-col max-md:items-center max-md:text-center gap-2 items-end">
-                    <p className="max-w-60">Making every customer feel valued—no matter the size of your audience.</p>
-                    <div className="flex items-center gap-4 mt-3">
-                        <a href="https://dribbble.com/" target="_blank" rel="noreferrer">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-dribbble size-5 hover:text-green-500" aria-hidden="true">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94"></path>
-                                <path d="M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32"></path>
-                                <path d="M8.56 2.75c4.37 6 6 9.42 8 17.72"></path>
-                            </svg>
-                        </a>
-                        <a href="https://www.linkedin.com/company/" target="_blank" rel="noreferrer">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-linkedin size-5 hover:text-green-500" aria-hidden="true">
-                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                                <rect width="4" height="12" x="2" y="9"></rect>
-                                <circle cx="4" cy="4" r="2"></circle>
-                            </svg>
-                        </a>
-                        <a href="https://x.com/" target="_blank" rel="noreferrer">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-twitter size-5 hover:text-green-500" aria-hidden="true">
-                                <path
-                                    d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z">
-                                </path>
-                            </svg>
-                        </a>
-                        <a href="https://www.youtube.com/" target="_blank" rel="noreferrer">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-youtube size-6 hover:text-green-500" aria-hidden="true">
-                                <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17">
-                                </path>
-                                <path d="m10 15 5-3-5-3z"></path>
-                            </svg>
-                        </a>
-                    </div>
-                    <p className="mt-3 text-center">© 2026 <a href="#">ResumeOS</a></p>
+
+                <div className="mt-24 pt-8 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-6 text-zinc-600 text-xs font-semibold tracking-wider uppercase">
+                    <p>© 2026 ResumeOS Intelligence. All rights reserved.</p>
+                    <p>Designed for the next generation of talent.</p>
                 </div>
             </footer>
-
-            <style>{`
-                @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-            
-                * {
-                    font-family: 'Poppins', sans-serif;
-                }
-            `}</style>
         </>
     )
 }

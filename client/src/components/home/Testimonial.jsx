@@ -28,69 +28,64 @@ const Testimonial = () => {
     ];
 
     const CreateCard = ({ card }) => (
-        <div className="p-4 rounded-lg mx-4 shadow hover:shadow-lg transition-all duration-200 w-72 shrink-0">
-            <div className="flex gap-2">
-                <img className="size-11 rounded-full" src={card.image} alt="User Image" />
+        <div className="p-8 rounded-3xl mx-4 bg-zinc-900 border border-zinc-800 hover:border-indigo-500/30 transition-all duration-300 w-80 shrink-0">
+            <div className="flex gap-4">
+                <img className="size-12 rounded-xl object-cover ring-2 ring-zinc-800" src={card.image} alt="User" />
                 <div className="flex flex-col">
-                    <div className="flex items-center gap-1">
-                        <p>{card.name}</p>
-                        <svg className="mt-0.5 fill-green-500" width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                            <path fillRule="evenodd" clipRule="evenodd" d="M4.555.72a4 4 0 0 1-.297.24c-.179.12-.38.202-.59.244a4 4 0 0 1-.38.041c-.48.039-.721.058-.922.129a1.63 1.63 0 0 0-.992.992c-.071.2-.09.441-.129.922a4 4 0 0 1-.041.38 1.6 1.6 0 0 1-.245.59 3 3 0 0 1-.239.297c-.313.368-.47.551-.56.743-.213.444-.213.96 0 1.404.09.192.247.375.56.743.125.146.187.219.24.297.12.179.202.38.244.59.018.093.026.189.041.38.039.48.058.721.129.922.163.464.528.829.992.992.2.071.441.09.922.129.191.015.287.023.38.041.21.042.411.125.59.245.078.052.151.114.297.239.368.313.551.47.743.56.444.213.96.213 1.404 0 .192-.09.375-.247.743-.56.146-.125.219-.187.297-.24.179-.12.38-.202.59-.244a4 4 0 0 1 .38-.041c.48-.039.721-.058.922-.129.464-.163.829-.528.992-.992.071-.2.09-.441.129-.922a4 4 0 0 1 .041-.38c.042-.21.125-.411.245-.59.052-.078.114-.151.239-.297.313-.368.47-.551.56-.743.213-.444.213-.96 0-1.404-.09-.192-.247-.375-.56-.743a4 4 0 0 1-.24-.297 1.6 1.6 0 0 1-.244-.59 3 3 0 0 1-.041-.38c-.039-.48-.058-.721-.129-.922a1.63 1.63 0 0 0-.992-.992c-.2-.071-.441-.09-.922-.129a4 4 0 0 1-.38-.041 1.6 1.6 0 0 1-.59-.245A3 3 0 0 1 7.445.72C7.077.407 6.894.25 6.702.16a1.63 1.63 0 0 0-1.404 0c-.192.09-.375.247-.743.56m4.07 3.998a.488.488 0 0 0-.691-.69l-2.91 2.91-.958-.957a.488.488 0 0 0-.69.69l1.302 1.302c.19.191.5.191.69 0z" />
-                        </svg>
-                    </div>
-                    <span className="text-xs text-slate-500">{card.handle}</span>
+                    <p className="font-bold text-white text-sm">{card.name}</p>
+                    <span className="text-xs text-indigo-400 font-medium">{card.handle}</span>
                 </div>
             </div>
-            <p className="text-sm py-4 text-gray-800">Radiant made undercutting all of our competitors an absolute breeze.</p>
+            <p className="text-sm py-6 text-zinc-400 leading-relaxed font-medium italic">"The AI suggestions were incredibly accurate. It highlighted achievements I hadn't even thought to include. Highly recommended!"</p>
+            <div className="flex gap-1 text-indigo-500">
+                {Array(5).fill(0).map((_, i) => (
+                    <svg key={i} className="size-3 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" /></svg>
+                ))}
+            </div>
         </div>
     );
 
     return (
-        <>
-            <div id='testimonials' className='flex flex-col items-center my-10 scroll-mt-12'>
-
-                <div className="flex items-center gap-2 text-sm text-green-600 bg-green-400/10 rounded-full px-6 py-1.5">
-                    <BookUserIcon className='size-4.5 stroke-green-600' />
-                    <span>Testimonials</span>
+        <div className="bg-zinc-950 py-24 border-y border-zinc-900">
+            <div id='testimonials' className='flex flex-col items-center px-6 scroll-mt-12'>
+                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-indigo-500 bg-indigo-500/10 rounded-lg px-5 py-2 mb-6 border border-indigo-500/20">
+                    <BookUserIcon className='size-4 stroke-indigo-500' />
+                    <span>User Stories</span>
                 </div>
-                <Title title="Don't just take our words" description="Hear what our users say about us. We're always looking for ways to improve. If you have a positive experience with us, leave a review." />
-
+                <Title title="Success stories only" description="Discover how candidates across the globe are securing positions at top-tier tech companies using our platform." />
             </div>
 
-            <div className="marquee-row w-full mx-auto max-w-5xl overflow-hidden relative">
-                <div className="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none bg-linear-to-r from-white to-transparent"></div>
-                <div className="marquee-inner flex transform-gpu min-w-[200%] pt-10 pb-5">
-                    {[...cardsData, ...cardsData].map((card, index) => (
-                        <CreateCard key={index} card={card} />
-                    ))}
+            <div className="mt-16">
+                <div className="marquee-row w-full overflow-hidden relative py-5">
+                    <div className="absolute left-0 top-0 h-full w-40 z-10 pointer-events-none bg-gradient-to-r from-zinc-950 to-transparent"></div>
+                    <div className="marquee-inner flex transform-gpu min-w-[200%]">
+                        {[...cardsData, ...cardsData].map((card, index) => (
+                            <CreateCard key={index} card={card} />
+                        ))}
+                    </div>
+                    <div className="absolute right-0 top-0 h-full w-40 z-10 pointer-events-none bg-gradient-to-l from-zinc-950 to-transparent"></div>
                 </div>
-                <div className="absolute right-0 top-0 h-full w-20 md:w-40 z-10 pointer-events-none bg-linear-to-l from-white to-transparent"></div>
+
+                <div className="marquee-row w-full overflow-hidden relative py-5 mt-4">
+                    <div className="absolute left-0 top-0 h-full w-40 z-10 pointer-events-none bg-gradient-to-r from-zinc-950 to-transparent"></div>
+                    <div className="marquee-inner marquee-reverse flex transform-gpu min-w-[200%]">
+                        {[...cardsData, ...cardsData].map((card, index) => (
+                            <CreateCard key={index} card={card} />
+                        ))}
+                    </div>
+                    <div className="absolute right-0 top-0 h-full w-40 z-10 pointer-events-none bg-gradient-to-l from-zinc-950 to-transparent"></div>
+                </div>
             </div>
 
-            <div className="marquee-row w-full mx-auto max-w-5xl overflow-hidden relative">
-                <div className="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none bg-linear-to-r from-white to-transparent"></div>
-                <div className="marquee-inner marquee-reverse flex transform-gpu min-w-[200%] pt-10 pb-5">
-                    {[...cardsData, ...cardsData].map((card, index) => (
-                        <CreateCard key={index} card={card} />
-                    ))}
-                </div>
-                <div className="absolute right-0 top-0 h-full w-20 md:w-40 z-10 pointer-events-none bg-linear-to-l from-white to-transparent"></div>
-            </div>
             <style>{`
             @keyframes marqueeScroll {
                 0% { transform: translateX(0%); }
                 100% { transform: translateX(-50%); }
             }
-
-            .marquee-inner {
-                animation: marqueeScroll 25s linear infinite;
-            }
-
-            .marquee-reverse {
-                animation-direction: reverse;
-            }
+            .marquee-inner { animation: marqueeScroll 35s linear infinite; }
+            .marquee-reverse { animation-direction: reverse; }
         `}</style>
-        </>
+        </div>
     )
 }
 
