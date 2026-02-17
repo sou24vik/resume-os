@@ -57,23 +57,23 @@ const Testimonial = () => {
 
             <div className="mt-16">
                 <div className="marquee-row w-full overflow-hidden relative py-5">
-                    <div className="absolute left-0 top-0 h-full w-40 z-10 pointer-events-none bg-gradient-to-r from-zinc-950 to-transparent"></div>
+                    <div className="absolute left-0 top-0 h-full w-40 z-10 pointer-events-none bg-linear-to-r from-zinc-950 to-transparent"></div>
                     <div className="marquee-inner flex transform-gpu min-w-[200%]">
                         {[...cardsData, ...cardsData].map((card, index) => (
                             <CreateCard key={index} card={card} />
                         ))}
                     </div>
-                    <div className="absolute right-0 top-0 h-full w-40 z-10 pointer-events-none bg-gradient-to-l from-zinc-950 to-transparent"></div>
+                    <div className="absolute right-0 top-0 h-full w-40 z-10 pointer-events-none bg-linear-to-l from-zinc-950 to-transparent"></div>
                 </div>
 
                 <div className="marquee-row w-full overflow-hidden relative py-5 mt-4">
-                    <div className="absolute left-0 top-0 h-full w-40 z-10 pointer-events-none bg-gradient-to-r from-zinc-950 to-transparent"></div>
+                    <div className="absolute left-0 top-0 h-full w-40 z-10 pointer-events-none bg-linear-to-r from-zinc-950 to-transparent"></div>
                     <div className="marquee-inner marquee-reverse flex transform-gpu min-w-[200%]">
                         {[...cardsData, ...cardsData].map((card, index) => (
                             <CreateCard key={index} card={card} />
                         ))}
                     </div>
-                    <div className="absolute right-0 top-0 h-full w-40 z-10 pointer-events-none bg-gradient-to-l from-zinc-950 to-transparent"></div>
+                    <div className="absolute right-0 top-0 h-full w-40 z-10 pointer-events-none bg-linear-to-l from-zinc-950 to-transparent"></div>
                 </div>
             </div>
 

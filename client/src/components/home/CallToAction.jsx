@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const CallToAction = () => {
     return (
         <div id='cta' className='w-full py-32 px-6 bg-zinc-950'>
-            <div className="max-w-6xl mx-auto rounded-[2.5rem] bg-gradient-to-br from-indigo-600 to-fuchsia-700 p-1px">
+            <div className="max-w-6xl mx-auto rounded-[2.5rem] bg-linear-to-br from-indigo-600 to-fuchsia-700 p-1px">
                 <div className="bg-zinc-950 rounded-[2.4rem] overflow-hidden relative py-16 md:py-24 px-10 md:px-20">
                     {/* Abstract Shapes */}
                     <div className="absolute top-0 right-0 size-96 bg-indigo-500/10 blur-3xl -translate-y-1/2 translate-x-1/2"></div>
